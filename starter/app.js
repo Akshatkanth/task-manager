@@ -1,13 +1,15 @@
 const express = require('express');
 const app = express();
-const routes = require('./routes/tasks')
+const tasks = require('./routes/tasks')
 
+//middleware
+app.use(express.json())
 
 //routes          //(req, res) is a call back function
 app.get('/hello', (req, res)=>{
     res.send('task manager app!')
 })
-
+ 
 app.use('/api/v1/tasks', tasks)
 
 const port = 3000 //hardcoding rn
