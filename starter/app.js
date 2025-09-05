@@ -9,12 +9,10 @@ require('dotenv').config()
 app.use(express.static('./public'))
 app.use(express.json())
 
-//routes          //(req, res) is a call back function
-// app.get('/hello', (req, res)=>{
-//     res.send('task manager app!')
-// })
- 
+//routes          
 app.use('/api/v1/tasks', tasks)
+
+app.use()
 
 const port = 3000 //hardcoding rn
 
