@@ -5,6 +5,8 @@ const tasks = require('./routes/tasks')
 const connectDB = require('./db/connect')
 const mongoose = require('mongoose');
 require('dotenv').config()
+const notFound = require('./middleware/not-found')
+
 //middleware
 app.use(express.static('./public'))
 app.use(express.json())
@@ -12,7 +14,7 @@ app.use(express.json())
 //routes          
 app.use('/api/v1/tasks', tasks)
 
-app.use()
+app.use(notFound)
 
 const port = 3000 //hardcoding rn
 
