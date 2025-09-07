@@ -18,7 +18,7 @@ app.use('/api/v1/tasks', tasks)
 app.use(notFound)
 app.use(errorHandlerMiddleWare)
 
-const port = process.env.PORT ||  3000 //hardcoding rn
+const port = 3000
 
 const start = async () =>{
     try{
